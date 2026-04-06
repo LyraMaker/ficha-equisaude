@@ -1,5 +1,5 @@
-export default function generatePrint(data){
-    return `
+export function generatePrint(data) {
+  return `
   <div style="width:680px; margin:0 auto;">
     <table border="1" cellpadding="6" cellspacing="0" style="width:100%; font-size:13px; border-collapse:collapse;">
       
@@ -96,3 +96,17 @@ export default function generatePrint(data){
   </div>
   `
 }
+
+export function filename(prefixo) {
+  const agora = new Date();
+  const year = agora.getFullYear();
+  const month = String(agora.getMonth() + 1).padStart(2, '0'); // Mês começa em 0
+  const day = String(agora.getDate()).padStart(2, '0');
+  const hours = String(agora.getHours()).padStart(2, '0');
+  const minutes = String(agora.getMinutes()).padStart(2, '0');
+  const seconds = String(agora.getSeconds()).padStart(2, '0');
+
+  return `${prefixo}-${year}${month}${day}-${hours}${minutes}${seconds}`;
+}
+
+

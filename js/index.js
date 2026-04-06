@@ -1,7 +1,10 @@
 import * as bootstrap from 'bootstrap'
-import generatePrint from './print.js'
+import html2pdf from 'html2pdf.js'
+
+import * as Print from './print.js'
 import * as Data from './data.js'
 import alertModal from './alert.js'
+
 
 
 const btnSave = document.querySelector("#salvar-btn");
@@ -21,5 +24,15 @@ btnSave.addEventListener('click', function (e) {
   msgModal.innerHTML = info;
 
   modal.show();
-});
+
+  savePdf.addEventListener('click', function(e){
+    e.preventDefault()
+    
+    var worker = html2pdf()
+    var element = Print.generatePrint(values)
+    var filename = Print.filename("ficha")
+
+    worker.from(element).saveAs(filename)
+  })
+})
 
