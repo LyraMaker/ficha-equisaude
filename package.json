@@ -12,6 +12,7 @@
     "parcel": "^2.16.4"
   },
   "dependencies": {
-    "bootstrap": "^5.3.8"
+    "bootstrap": "^5.3.8",
+    "html2pdf.js": "^0.14.0"
   }
 }
