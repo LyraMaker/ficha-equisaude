@@ -1,28 +1,40 @@
 {
-"shortcuts": [
-  {
-    "name": "Start Live Session",
-    "short_name": "Start Live",
-    "description": "Jump direction into starting or joining a live session",
-    "url": "/?startLive",
-    "icons": [
-      {
-        "src": "https://pwabuilder.com/assets/icons/icon_192.png",
-        "sizes": "192x192"
-      }
-    ]
-  }
-], 
-  "name": "Equisaude",
-  "short_name": "Criador de ficha",
-  "start_url": "./index.html",
+  "name": "The name of your application",
+  "short_name": "This name will show in your Windows taskbar, in the start menu, and Android homescreen",
+  "start_url": "The URL that should be loaded when your application is opened",
   "display": "standalone",
-  "description": "Criador de Ficha",
-  "lang": "pt-br",
+  "description": "A description for your application",
+  "lang": " The default language of your application",
   "dir": "auto",
   "theme_color": "#000000",
   "background_color": "#000000",
-  "orientation": "portrait",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "src/public/img/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/public/img/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "src/public/img/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/public/img/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
   "screenshots": [
     {
       "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
@@ -38,30 +50,11 @@
     }
   ],
   "prefer_related_applications": false,
-  "icons": [
+  "shortcuts": [
     {
-      "src": "./img/manifest-icon-192.maskable.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "./img/manifest-icon-192.maskable.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "./img/manifest-icon-512.maskable.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "./img/manifest-icon-512.maskable.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "name": "The name you would like to be displayed for your shortcut",
+      "url": "The url you would like to open when the user chooses this shortcut. This must be a URL local to your PWA. For example: If my start_url is /, this URL must be something like /shortcut",
+      "description": "A description of the functionality of this shortcut"
     }
   ]
 }
