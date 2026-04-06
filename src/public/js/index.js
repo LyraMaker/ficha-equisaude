@@ -36,3 +36,19 @@ btnSave.addEventListener('click', function (e) {
   })
 })
 
+
+
+// Registro do Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register(
+      new URL('../service-worker.js', import.meta.url), 
+      { type: 'module' }
+    )
+    .then(reg => console.log("✅ SW registrado no escopo:", reg.scope))
+    .catch(err => console.error("❌ Erro ao registrar SW:", err));
+  });
+}
+
+// Seu código normal do app abaixo...
+console.log("App inicializado");
